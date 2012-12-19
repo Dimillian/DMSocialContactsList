@@ -29,9 +29,13 @@ The correct way would be to send the selected contacts as a payload to your serv
 
 ##The user interface##
 
-The user interface is simple but very functional. It follow the Apple guidelines. You have a simple list of contacts with a **UISearchBar** on top. Selecting a contact display a **UIActionSheet**. The **UItableView** clearly retain selected contacts. When you do a search result are shown instantly. There is no fancy things, no need too. 
+The user interface is simple and ugly but very functional. It follow the Apple guidelines. You have a simple list of contacts with a **UISearchBar** on top. Selecting a contact display a **UIActionSheet**. The **UITableView** clearly retain selected contacts. When you do a search result are shown instantly. There is no fancy things, no need too. 
 
 Sure this example would be greatly improved with beautiful custom cells.
+
+![image](https://raw.github.com/Dimillian/DMSocialContactsList/master/images/screen1.png)
+
+![image](https://raw.github.com/Dimillian/DMSocialContactsList/master/images/screen2.png)
 
 ##How it works
 First it load your local contacts with the Apple AddressBook framework. 
