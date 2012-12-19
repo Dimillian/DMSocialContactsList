@@ -29,6 +29,7 @@
 		9F8D65CF16821E9E0066595E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8D65CE16821E9E0066595E /* SystemConfiguration.framework */; };
 		9F8D65D116821EB70066595E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8D65D016821EB70066595E /* AdSupport.framework */; };
 		9F8D65D316821EBA0066595E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8D65D216821EBA0066595E /* CFNetwork.framework */; };
+		9F8D65E3168250860066595E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8D65E2168250860066595E /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9F8D65CE16821E9E0066595E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9F8D65D016821EB70066595E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9F8D65D216821EBA0066595E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9F8D65E2168250860066595E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		9F8D65831681F3880066595E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F8D65E2168250860066595E /* placeholder.png */,
 				9F8D65841681F3880066595E /* DMSocialContactsList-Info.plist */,
 				9F8D65851681F3880066595E /* InfoPlist.strings */,
 				9F8D65881681F3880066595E /* main.m */,
@@ -217,6 +220,7 @@
 				9F8D65911681F3880066595E /* Default@2x.png in Resources */,
 				9F8D65931681F3880066595E /* Default-568h@2x.png in Resources */,
 				9F8D65991681F3880066595E /* DMContactlistViewController.xib in Resources */,
+				9F8D65E3168250860066595E /* placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

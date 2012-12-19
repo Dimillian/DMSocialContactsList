@@ -146,7 +146,6 @@
                       state:(FBSessionState) state
                       error:(NSError *)error
 {
-    NSLog(@"%@", error);
     switch (state) {
         case FBSessionStateOpen: {
             [self getFBFriends];
@@ -272,10 +271,10 @@
     }
     cell.textLabel.text = [NSString stringWithFormat:@"%@", contact.fullName];
     if (contact.facebookId) {
-        [cell.imageView setImageWithURL:contact.facebookImageURL];
+        [cell.imageView setImageWithURL:contact.facebookImageURL placeholderImage:[UIImage imageNamed:@"placeholder"]];
     }
     else{
-        [cell.imageView setImage:[UIImage imageWithData:contact.localImageData]];   
+        [cell.imageView setImage:[UIImage imageWithData:contact.localImageData]];
     }
 
     return cell;
@@ -313,7 +312,7 @@
         _tmpSelectedContact = contact;
         UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"Send to" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
         if (contact.facebookId) {
-            [sheet addButtonWithTitle:@"Facebook wall"];
+            [sheet addButtonWithTitle:[NSString stringWithFormat:@"Facebook ID: %@", contact.facebookId]];
         }
         if (contact.phones) {
             for (NSString *phone in contact.phones) {
