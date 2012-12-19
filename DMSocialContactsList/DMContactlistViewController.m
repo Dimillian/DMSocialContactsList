@@ -95,7 +95,10 @@
                     if (ABMultiValueGetCount(emails) > 0) {
                         for (CFIndex i = 0; i < ABMultiValueGetCount(emails); i++) {
                             NSString *email =  (NSString *)CFBridgingRelease(ABMultiValueCopyValueAtIndex(emails, i));
-                            [contact addEmail:email];
+                            //Ignore local FB contact, useless to send message to facebook address.
+                            if (![email hasSuffix:@"facebook.com"]) {
+                                [contact addEmail:email];
+                            }
                         }
                     }
                     if (ABMultiValueGetCount(phones) > 0) {
@@ -106,7 +109,7 @@
                     }
                     
                     //Ensure that you only display proper contacts. No old sim contacts or default contacts (like Apple store)
-                    if (![[contact fullName]hasPrefix:@"_"] && (lastName || firstName)) {
+                    if (![[contact fullName]hasPrefix:@"_"] && (lastName || firstName) && (contact.phones && contact.emails)) {
                         NSData *contactImageData = (NSData*)CFBridgingRelease(ABPersonCopyImageDataWithFormat(ref,
                                                                                                               
                                                                                                               kABPersonImageFormatThumbnail));
