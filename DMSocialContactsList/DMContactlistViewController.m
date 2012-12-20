@@ -109,7 +109,7 @@
                     }
                     
                     //Ensure that you only display proper contacts. No old sim contacts or default contacts (like Apple store)
-                    if (![[contact fullName]hasPrefix:@"_"] && (lastName || firstName) && (contact.phones && contact.emails)) {
+                    if (![[contact fullName]hasPrefix:@"_"] && (lastName || firstName) && (contact.phones || contact.emails)) {
                         NSData *contactImageData = (NSData*)CFBridgingRelease(ABPersonCopyImageDataWithFormat(ref,
                                                                                                               
                                                                                                               kABPersonImageFormatThumbnail));
